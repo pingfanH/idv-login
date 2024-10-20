@@ -13,7 +13,6 @@
 
 ### 使用预编译版本
 1. 从本仓库的``release``页下载最新版本的可执行文件(*.exe)
-- **注:如果你使用的是`Windows7`，请下载带有`Py3.8`后缀的版本；如果你使用的是`Windows8`及以上版本，两者均可，推荐下载带有`Py3.12`后缀的版本**)
 - 下载完成后，**强烈建议**校验其``sha256``是否与 ``release``中``.sha256``的值相同。
     如果``sha256``不同，那么您下载的文件是不安全的，可能存在盗号风险，请检查您的网络环境并重新在**官方仓库**下载文件。
 2. 您可以使用 ``Windows Powershell`` 的 ``Get-FileHash`` 命令来获取文件的``sha256``值，例如，计算v5.0.0-beta版本的`sha256`可以使用以下命令：
@@ -35,7 +34,7 @@
 ### 预编译版本的构建信息
 1. 自`5.3.0`版本，本程序会在构建时内嵌构建信息便于溯源
 2. 构建信息的格式为`actionId(commitSHA)`
-3. 在 (https://github.com/Alexander-Porter/idv-login/actions/runs/{actionId}) 处能看到本次构建的过程和构建结果的SHA256，参照上方校验方法校验即可确认工具未被篡改
+3. 在 (https://github.com/Alexander-Porter/idv-login/actions/runs/{actionId}) 处能看到本actionId指向的构建过程和构建结果的SHA256，参照上方校验方法校验即可确认工具未被篡改
 
 ### 手动构建（Optional）
 
