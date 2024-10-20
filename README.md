@@ -6,7 +6,7 @@
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Alexander-Porter/idv-login/build-stable.yaml)
 
 
-项目仓库：[click](https://github.com/Alexander-Porter/idv-login)
+项目仓库：[click](https://github.com/Alexander-Porter/idv-login) 如果项目帮到了你，就请为我点个Star吧！
 教程：[click](https://www.yuque.com/keygen/kg2r5k/izpgpf4g3ecqsbf3)
 
 ## 1. 使用方式
