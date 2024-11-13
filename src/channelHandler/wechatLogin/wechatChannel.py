@@ -21,6 +21,7 @@ class WechatLogin:
         self.wx_appid=wx_appid
         self.channel=channel
         self.refreshToken = refreshToken
+        self.qrcode_path="qrcode.png"
 
     def webLogin(self):
         ts=str(int(time.time()*1000))
@@ -56,8 +57,8 @@ class WechatLogin:
             f.write(base64.b64decode(qrcode))
         gevent.sleep(0.5)
         #不要阻塞
-        import webbrowser
-        webbrowser.open("qrcode.png")
+        import subprocess
+        subprocess.Popen(["start", "qrcode.png"], shell=True)
 
 
         while True:

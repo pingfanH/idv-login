@@ -15,6 +15,7 @@
  You should have received a copy of the GNU General Public License
  along with this program. If not, see <https://www.gnu.org/licenses/>.
  """
+import socket
 import pywintypes
 import sys
 
@@ -179,6 +180,28 @@ def initialize():
         webbrowser.open(url)
         genv.set(f"{genv.get('VERSION')}_first_use",False,True)
 
+def get_computer_name():
+    try:
+        # 获取计算机名
+        computer_name = socket.gethostname()
+        # 确保计算机名编码为 UTF-8
+        computer_name_utf8 = computer_name.encode('utf-8').decode('utf-8')
+        return computer_name_utf8
+    except Exception as e:
+        logger.exception(f"获取计算机名时发生异常: {e}")
+        return None
+
+def get_current_username():
+    try:
+        # 获取当前用户名
+        username = os.getlogin()
+        # 确保用户名编码为 UTF-8
+        username_utf8 = username.encode('utf-8').decode('utf-8')
+        return username_utf8
+    except Exception as e:
+        logger.exception(f"获取当前用户名时发生异常: {e}")
+        return None
+
 def welcome():
     print(f"[+] 欢迎使用第五人格登陆助手 {genv.get('VERSION')}!")
     print(" - 官方项目地址 : https://github.com/Alexander-Porter/idv-login/")
@@ -197,6 +220,9 @@ def cloudBuildInfo():
         print(f"构建信息：{message}。如需校验此版本是否被篡改，请前往官方项目地址。")
     except:
         print("警告：没有找到校验信息，请不要使用本工具，以免被盗号。")
+
+def apply_hotfix():
+    pass
 
 if __name__ == "__main__":
     kernel32 = ctypes.WinDLL("kernel32")
@@ -217,6 +243,22 @@ if __name__ == "__main__":
         initialize()
         welcome()
         handle_update()
+        apply_hotfix()
+        #如果计算机名字包含非ascii字符，会导致后续的操作失败
+        computer_name = get_computer_name()
+        #check if computer name is ascii
+        if computer_name is not None and not all(ord(char) < 128 for char in computer_name):
+            logger.error(f"计算机名包含非ASCII字符: {computer_name}")
+            logger.error("请将计算机名修改为纯ASCII字符后重试！具体请参见常见问题解决文档。")
+            os.system("pause")
+            sys.exit(-1)
+        user_name = get_current_username()
+        #check if user name is ascii
+        if user_name is not None and not all(ord(char) < 128 for char in user_name):
+            logger.error(f"用户名包含非ASCII字符: {user_name}，将导致华为、小米、VIVO账号登录失败！")
+            logger.error("如有相关需求，请将用户名修改为纯ASCII字符后重试！具体请参见常见问题解决文档。")
+        logger.info(f"计算机名: {computer_name}")
+        logger.info(f"用户名: {user_name}")
         if (os.path.exists(genv.get("FP_WEBCERT")) == False) or (
             os.path.exists(genv.get("FP_WEBKEY")) == False
         ):
