@@ -1,5 +1,5 @@
 {
-    "lastModified": 1728966684,
+    "lastModified": 1731685838,
     "version": "v5.4.1-stable",
     "detail": "### IdentityV Login Helper v5.4.1-stable CHANGELOG\r\n\r\n## Improvement \ud83d\ude80\r\n[\u00b7] \u4fee\u590d\u4e86VIVO\u6e20\u9053\u5c0f\u53f7\u767b\u5f55\u7684\u82e5\u5e72\u95ee\u9898\r\n[\u00b7] \u589e\u52a0\u4e86\u5e94\u7528\u5b9d\u5fae\u4fe1\u767b\u5f55\u88ab\u9876\u53f7\u7684\u63d0\u793a\r\n[\u00b7] \u66f4\u6362\u4e86\u6e20\u9053\u670d\u7ba1\u7406\u754c\u9762\u7684\u516c\u5171CDN\uff0c\u52a0\u5feb\u5176\u6253\u5f00\u901f\u5ea6\r\n\r\n## In Progress \ud83d\udea7\r\n[\u00b7] \u4e5d\u6e38\u6e20\u9053\u670d\u652f\u6301\u3002\r\n\r\n## Known Bugs \ud83d\udc80\r\n[\u00b7] \u4e5d\u6e38\u6e20\u9053\u5bb9\u6613\u8fc7\u671f\u3002\r\n[\u00b7] \u90e8\u5206\u5730\u533a\u5c0f\u7c73\u6e20\u9053\u767b\u5f55\u4f1a\u5931\u8d25\uff0c\u8bf7\u81ea\u884c\u89e3\u51b3\u7f51\u7edc\u95ee\u9898\u3002\r\n\r\n## Others \ud83e\uddf0\r\n[\u00b7] **\u672c\u5de5\u5177\u5b8c\u5168\u514d\u8d39\u5f00\u6e90\uff0c\u4e25\u7981\u5c06\u6b64\u5de5\u5177\u7528\u4e8e\u4efb\u4f55\u5546\u4e1a\u884c\u4e3a\uff01\u4e8c\u6b21\u5f00\u53d1\u53ca\u4f20\u64ad\u8bf7**\u6807\u660e\u51fa\u5904**\u5e76\u9075\u5b88`GPLv3`\u534f\u8bae\uff01**\r\n\r\n## Tips\r\n\u8bf7\u6309\u5de5\u5177\u63d0\u793a\u6309\u952e\u51b3\u5b9a\u662f\u5426\u66f4\u65b0\uff01\r\n\r\n[\u4e0b\u8f7d\u524d\u5fc5\u770b](https://www.yuque.com/keygen/kg2r5k/izpgpf4g3ecqsbf3)",
     "downloadUrl": "https://gitee.com/opguess/idv-login/releases/tag/v5.4.1-stable",
@@ -165,6 +165,21 @@
                 "app_id": "100112247",
                 "package_name": "com.netease.wyclx.huawei",
                 "api_key": "CV49SISsPwVEX8dCFN1amzAJ2/9NA1D7hEgbJcqs/vffTR0zFZVJiHbVft+bNW06J80xCX04Wx8h1ClL4m6fgEQORu8r"
+            }
+        },
+        {
+            "package_name": "com.netease.stzb.huawei",
+            "app_channel": "huawei",
+            "log_key": "wIBYU30j5y3iehV5iJ8r7L0_3LyYChEr",
+            "game_id": "g10",
+            "huawei": {
+                "cp_id": "900086000000106632",
+                "product_id": "9105163812218187479",
+                "client_id": "233897443790424256",
+                "client_secret": "CFA70E704D95948C9162746FD1170B1226E13B17F5ECF0846E57B80FDD04F13A",
+                "app_id": "10296352",
+                "package_name": "com.netease.stzb.huawei",
+                "api_key": "CV562o/fuSZ4USw2N259kLaYsGTkvxTZVFadSXDd+utMthJ+JBes+mfumX58Alwnk0H60uBlUnc2Igw7YrcdERXnXh7N"
             }
         }
     ]
