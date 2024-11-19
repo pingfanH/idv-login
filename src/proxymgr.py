@@ -32,7 +32,6 @@ import psutil
 import const
 import subprocess
 
-
 app = Flask(__name__)
 logger=setup_logger()
 
@@ -483,10 +482,14 @@ class proxymgr:
                 log=web_logger,
             )
         if socket.gethostbyname(genv.get("DOMAIN_TARGET")) == "127.0.0.1":
+            #os.popen('E:/dwrg/dwrg.exe')
+            os.chdir('E:/dwrg')
+            os.system('dwrg.exe')
             logger.info("拦截成功! 您现在可以打开游戏了")
             logger.warning("如果您在之前已经打开了游戏，请关闭游戏后重新打开，否则工具不会生效！")
             logger.info("登入账号且已经··进入游戏··后，您可以关闭本工具。")
             server.serve_forever()
+            
             return True
         else:
             logger.error("检测拦截目标域名失败！请将程序加入杀毒软件白名单后重试。")
